@@ -1,0 +1,49 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8727D3;
+    border-bottom: 10px solid #000000;
+    padding: 10px 20px;
+}
+
+nav {
+    text-align: right;
+}
+
+a {
+    display: inline-flex; /*inline-flex serve para deixar todos os elementos em uma linha e definir como ele será posicionado no espaço disponivel dentro do seu quadrado/container*/
+    align-items: center; /*alinhar o item dentro de a no centro, no caso pegando por base a palavra escrita em a*/
+    color: white;
+    font-size: 20px;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+a::before {  /* ::before = pseudo elemento; esse a::before foi criado para poder colocar o quadradinho antes da palavra escrita no bloco a*/
+    content: ""; /* como tudo precisa de um conteudo o content vazio serve para "colocar" um conteudo dentro do item*/
+     background-color: #FF6883;
+     width: 10px;
+     height: 10px;
+     margin-right: 10px;
+    }
+
+
+#button {
+    display: inline-block;
+    background-color: #FF6883;
+    box-shadow: 5px 5px 0 #000000;
+    padding: 18px 20px;
+    margin-right: 0;
+}
+
+#button:hover {
+    transform: translateY(-0.1em);
+    transition: all 0.1s ease-out;
+  }
+  
+#button:active {
+    transform: translateY(0px);
+    transition: all 0.1s ease-in;
+  }
